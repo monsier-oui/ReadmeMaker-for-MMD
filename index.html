@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ReadmeMaker</title>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="script.js"></script>
+</head>
+<body>
+	<div id="input">
+		<ul>
+			<li><label><input type="checkbox" class="term">商用利用</label></li>
+			<li><label><input type="checkbox" class="term">同人誌に使用</label></li>
+			<li><label><input type="checkbox" class="term">パーツ流用</label></li>
+			<li><label><input type="checkbox" class="term">衣装変更</label></li>
+			<li><label><input type="checkbox" class="term">パーツの色変え</label></li>
+		</ul>
+		<button type="button" id="save">SAVE</button>
+	</div>
+
+	<div id="output">
+		<p>やっていいこと</p>
+		<ul id="output-ok">
+		</ul>
+		<p>やっちゃだめなこと</p>
+		<ul id="output-ng">
+		</ul>
+	</div>
+	
+</body>
+</html>
