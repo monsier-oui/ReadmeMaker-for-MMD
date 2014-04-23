@@ -1,0 +1,135 @@
+@charset: UTF-8;
+
+/* レイアウト */
+body {
+	margin: 0;
+	padding: 20px;
+	color: #555555;
+}
+
+/* チェックボックス */
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+ul ul {
+	margin-left: 2em;
+}
+ul#input li {
+	line-height: 1.5em;
+}
+input[type="checkbox"]{
+	margin: auto 5px;
+	line-height: 1.5em;
+}
+
+/* ボタン */
+button {
+	margin: 0;
+	padding: 8px 20px;
+	font-size: 1em;
+	color: #ffffff;
+	font-weight: bold;
+	letter-spacing: 0.2em;
+	background: #bbbbbb;
+	border: #aaaaaa 1px solid;
+	border-radius: 5px;
+}
+#save {
+	margin: 15px 0px;
+}
+
+/* タブ */
+#output {
+	width: 680px;
+	*zoom: 1;
+	border: 1px solid #dddddd;
+	border-radius: 0.1875em;
+	margin-bottom: 1.5em;
+}
+#output:before, #output:after {
+	content: " ";
+	display: table;
+}
+#output:after {
+	clear: both;
+}
+#output {
+	border: none;
+}
+#output li.tab {
+	display: inline;
+}
+#output li.tab:first-child a.tab-link {
+	border-top-left-radius: 0.1875em;
+	border-top-right-radius: 0.1875em;
+	border-top: 0;
+}
+#output li.tab:last-child a.tab-link {
+	border-bottom-left-radius: 0.1875em;
+	border-bottom-right-radius: 0.1875em;
+}
+#output li.tab:last-child a.tab-link {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+#output li.tab a.tab-link {
+	background-color: #ffffff;
+	border-top: 1px solid #dddddd;
+	color: #555555;
+	display: block;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 0.75em 0.809em;
+} 
+#output li.tab a.tab-link {
+	display: inline-block;
+	vertical-align: baseline;
+	zoom: 1;
+	*display: inline;
+	*vertical-align: auto;
+	border-top: 0;
+	border-top-right-radius: 0.1875em;
+	border-top-left-radius: 0.1875em;
+}
+#output li.tab a.tab-link:hover {
+	color: #477dca;
+}
+
+#output li.tab a.tab-link:focus {
+	outline: none;
+}
+
+#output li.tab a.tab-link.is-active {
+	background-color: #f7f7f7;
+	border-bottom: 0;
+}
+
+#output li.tab a.tab-link.is-active {
+	background-color: #f7f7f7;
+	border: 1px solid #dddddd;
+	border-bottom: 1px solid #f7f7f7;
+	margin-bottom: -1px;
+}
+#output li.tab section {
+	padding: 1.5em 1.618em;
+	background: #f7f7f7;
+	display: none;
+	overflow: hidden;
+	width: 100%;
+}
+#output li.tab section {
+	border-bottom-left-radius: 0.1875em;
+	border-bottom-right-radius: 0.1875em;
+	border: 1px solid #dddddd;
+	float: left;
+	left: 0;
+	padding: 0.75em 0.809em;
+}
+#output li.tab section p {
+	-webkit-columns: 1;
+	-moz-columns: 1;
+	columns: 1;
+}

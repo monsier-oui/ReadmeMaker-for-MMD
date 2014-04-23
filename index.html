@@ -5,27 +5,73 @@
 	<title>ReadmeMaker</title>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="script.js"></script>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div id="input">
-		<ul>
-			<li><label><input type="checkbox" class="term">商用利用</label></li>
-			<li><label><input type="checkbox" class="term">同人誌に使用</label></li>
-			<li><label><input type="checkbox" class="term">パーツ流用</label></li>
-			<li><label><input type="checkbox" class="term">衣装変更</label></li>
-			<li><label><input type="checkbox" class="term">パーツの色変え</label></li>
-		</ul>
-		<button type="button" id="save">SAVE</button>
-	</div>
+	<ul id="input">
+		<p>利用について</p>
+		<li><label><input type="checkbox" class="term" />公序良俗に反する表現、利用</label></li>
+		<li><label><input type="checkbox" class="term" />架空・実在問わず特定人物への誹謗中傷・侮辱のための表現、利用</label></li>
+		<li><label><input type="checkbox" class="term" />他者を政治的・宗教的に扇動するための表現、利用</label></li>
+		<li><label><input type="checkbox" class="term"/>商用利用</label></li>
+		<li><label><input type="checkbox" class="term"/>同人活動(同人アニメ、同人誌、同人ゲームなど)での利用</label></li>
+		<li><label><input type="checkbox" class="term"/>成人向け作品への利用</label></li>
+		<li><label><input type="checkbox" class="term"/>MMD以外のソフトウェアでの利用</label></li>
+		<li><label><input type="checkbox" class="term"/>モデルの特定パーツの他モデルへの流用</label></li>
+		
+		<p>表現について</p>
+		<li><label><input type="checkbox" class="term-parent"/>性描写</label>
+			<ul>
+				<li><label><input type="checkbox" class="term"/>成人向け性描写</label></li>
+				<li><label><input type="checkbox" class="term"/>成人向けではないが過度な性描写</label>
+				<li><label><input type="checkbox" class="term"/>子供向け(いわゆる少年誌レベルの)性描写</label>
+			</ul>
+		</li>
+		<li><label><input type="checkbox" class="term"/>成人向け暴力描写</label></li>
+		<li><label><input type="checkbox" class="term"/>暴力描写</label></li>
+		<li><label><input type="checkbox" class="term"/>原作の設定を著しく逸脱した描写</label></li>
+		<li><label><input type="checkbox" class="term-parent"/>改造・改変</label>
+			<ul>
+				<li><label><input type="checkbox" class="term"/>大きさの変更</label></li>
+				<li><label><input type="checkbox" class="term"/>特定パーツのサイズ変更</label></li>
+				<li><label><input type="checkbox" class="term"/>特定パーツの色変更</label></li>
+				<li><label><input type="checkbox" class="term"/>テクスチャ変更</label>
+				<li><label><input type="checkbox" class="term"/>モーフ追加</label>
+				<li><label><input type="checkbox" class="term"/>自作パーツの追加、または自作パーツへの変更</label></li>
+				<li><label><input type="checkbox" class="term"/>配布パーツの追加、または配布パーツへの変更</label></li>
+			</ul>
+		</li>
+		
+		<li><label><input type="checkbox" class="term-parent"/>再配布</label>
+			<ul>
+				<li><label><input type="checkbox" class="term"/>改変をしない状態での再配布</label></li>
+				<li><label><input type="checkbox" class="term"/>改変済みモデルの配布</label></li>
+				<li><label><input type="checkbox" class="term"/>自作モデルなどと同梱しての再配布</label></li>
+			</ul>
+		</li>
+	</ul>
 
-	<div id="output">
-		<p>やっていいこと</p>
-		<ul id="output-ok">
-		</ul>
-		<p>やっちゃだめなこと</p>
-		<ul id="output-ng">
-		</ul>
-	</div>
+	<button type="button" id="save">SAVE</button>
 	
+	<ul id="output">
+		<li class="tab">
+			<a href="#" class="is-active tab-link">Plain Text</a>
+			<section>
+				【やってもいいこと】
+				<p id="output-pt-ok"></p>
+				【やっちゃだめなこと】
+				<p id="output-pt-ng"></p>	
+			</section>
+		</li>
+		<li class="tab">
+			<a href="#" class="tab-link">Markdown</a>
+			<section>
+				#やってもいいこと
+				<p id="output-md-ok"></p>
+				#やっちゃだめなこと
+				<p id="output-md-ng"></p>
+			</section>
+		</li>
+	</ul>
 </body>
 </html>
