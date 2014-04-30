@@ -21,7 +21,9 @@ ul#input li {
 }
 input[type="checkbox"]{
 	margin: auto 5px;
-	line-height: 1.5em;
+	height: 2em;
+	width: 2em;
+	line-height: 2em;
 }
 
 /* ボタン */
@@ -35,6 +37,7 @@ button {
 	background: #bbbbbb;
 	border: #aaaaaa 1px solid;
 	border-radius: 5px;
+	outline: none;
 }
 #save {
 	margin: 15px 0px;
