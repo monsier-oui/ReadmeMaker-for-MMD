@@ -116,6 +116,9 @@ button {
 	border-width: 11px;
 	margin-left: -11px;
 }
+#tweet-count a {
+	display: block;
+}
 
 /* タブ */
 #output {
