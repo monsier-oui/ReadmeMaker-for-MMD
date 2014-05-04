@@ -1,10 +1,34 @@
 @charset: UTF-8;
 
-/* レイアウト */
+/* 全体 */
 body {
-	margin: 0;
-	padding: 20px;
 	color: #555555;
+	font-family: "Hiragino Kaku Gothic ProN", Meiryo, Verdana, sans-serif;
+	line-height: 1.5em;
+}
+.wrapper {
+	background: #f1f1f1;
+}
+.row {
+	background: #ffffff;
+}
+
+/* テキスト */
+h1 {
+	margin: 0 0 0.5em 0;
+	font-size: 3em;
+}
+h2 {
+	margin: 0.5em 0;
+	font-size: 1.2em;
+}
+a {
+	color: inherit;
+	font-weight: bold;
+	text-decoration: none;
+}
+a:hover {
+	color: #21a9e1;
 }
 
 /* チェックボックス */
@@ -13,11 +37,17 @@ ul {
 	padding: 0;
 	list-style: none;
 }
-ul ul {
-	margin-left: 2em;
+ul ul label {
+	padding-left: 2em;
 }
-ul#input li {
-	line-height: 1.5em;
+ul > li:hover {
+	background: #f1f1f1;
+}
+ul ul > li:hover {
+	background: #e1e1e1;
+}
+label {
+	display: block;
 }
 input[type="checkbox"]{
 	margin: auto 5px;
@@ -35,12 +65,56 @@ button {
 	font-weight: bold;
 	letter-spacing: 0.2em;
 	background: #bbbbbb;
-	border: #aaaaaa 1px solid;
+	border: none;
 	border-radius: 5px;
 	outline: none;
+	cursor: pointer;
 }
 #save {
+	background: #B1CD4B;
+}
+#save, #clear {
 	margin: 15px 0px;
+	padding: 20px 40px;
+}
+#tweet {
+	color: #ffffff;
+	background: #21a9e1;
+}
+#tweet-count {
+	margin-bottom: 13px;
+	padding: 5px;
+	width: 95px;
+	color: #777777;
+	font-size: 1.1em;
+	text-align: center;
+	position: relative;
+	background: #ffffff;
+	border: 1px solid #afafaf;
+	border-radius: 3px;
+}
+#tweet-count:after, #tweet-count:before {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+#tweet-count:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-top-color: #ffffff;
+	border-width: 10px;
+	margin-left: -10px;
+}
+#tweet-count:before {
+	border-color: rgba(175, 175, 175, 0);
+	border-top-color: #afafaf;
+	border-width: 11px;
+	margin-left: -11px;
 }
 
 /* タブ */
