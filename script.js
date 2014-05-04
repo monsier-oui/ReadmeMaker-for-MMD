@@ -104,7 +104,7 @@ $(document).ready(function(){
 		dataType: 'jsonp',
 		success: function(data) {
 			//読み込み結果
-			$('#tweet-count').text(data.count);
+			$('#tweet-count').find('a').text(data.count).attr({'href': 'https://twitter.com/search?q='+url+'&src=typd'});
 		}
 	});
 
