@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ja">
 <head>
 	<meta charset="UTF-8">
 	<title>ReadmeMaker for MMD</title>
@@ -16,12 +16,10 @@
 	<h1>ReadmeMaker for MMD β</h1>
 	<p>MMD関連配布物のReadme作成を補助するチェックリストです。全体的にモデル向けな内容ですが、それ以外でもお使いいただいて構いません。<br>
 	   やってもいいこと(許可事項)にチェックを入れて、SAVEボタンでテキストに出力できます。プレーンテキスト(テキストファイル向け)とMarkdown、お好きな方をお選びください。<br>
-	   githubのリポジトリは<a href="https://github.com/monsier-oui/ReadmeMaker-for-MMD">ここ</a>です。</p>
-	<p>OMFに合わせてベータ版を公開しました。不具合報告、要望などございましたらgithubの<a href="https://github.com/monsier-oui/ReadmeMaker-for-MMD/issues">Issues</a>へどうぞ。</p>
+	   ※テキストファイルとして同梱する場合、英語版は半角英数字のみで書かれたMarkdownがおすすめです。内容は全く同じです。<br></p>
+	<p>githubのリポジトリは<a href="https://github.com/monsier-oui/ReadmeMaker-for-MMD">ここ</a>です。不具合報告、要望などございましたら<a href="https://github.com/monsier-oui/ReadmeMaker-for-MMD/issues">Issues</a>へどうぞ。</p>
 </div>
 <div class="col_3">
-	<!--<a href="https://twitter.com/share" class="twitter-share-button" data-size="large">Tweet</a>
-	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>-->
 	<p id="tweet-count"><a href="" target="_blank"></a></p>
 	<button id="tweet">Tweet!</button>
 </div>
@@ -30,52 +28,238 @@
 <div class="col_12">
 	<ul id="input">
 		<h2>利用について</h2>
-		<li><label><input type="checkbox" class="term indent-first" />公序良俗に反する表現、利用</label></li>
-		<li><label><input type="checkbox" class="term indent-first" />架空・実在問わず特定人物への誹謗中傷・侮辱のための表現、利用</label></li>
-		<li><label><input type="checkbox" class="term indent-first" />他者を政治的・宗教的に扇動するための表現、利用</label></li>
-		<li><label><input type="checkbox" class="term indent-first"/>商用利用</label></li>
-		<li><label><input type="checkbox" class="term indent-first"/>同人活動(同人アニメ、同人誌、同人ゲームなど)での利用</label></li>
-		<li><label><input type="checkbox" class="term indent-first"/>ポーズモデル(デッサン人形)としての利用</label></li>
-		<li><label><input type="checkbox" class="term indent-first"/>閲覧制限のある作品への利用</label></li>
-		<li><label><input type="checkbox" class="term indent-first"/>MMD以外のソフトウェアでの利用</label></li>
-		<li><label><input type="checkbox" class="term indent-first"/>特定パーツの他モデルへの流用</label></li>
+		<li>
+			<label><input type="checkbox" class="term indent-first" />
+				<span lang="ja">公序良俗に反する表現、利用</span>
+				<span lang="en">Use in work which is contrary to public order or morality</span>
+			</label>
+		</li>
+		<li>
+			<label><input type="checkbox" class="term indent-first" />
+				<span lang="ja">架空・実在問わず特定人物や団体への誹謗中傷・侮辱のための表現、利用</span>
+				<span lang="en">Use in work to defame/insult an individual and a group eather real or fictional</span>
+			</label>
+		</li>
+		<li>
+			<label>
+				<input type="checkbox" class="term indent-first" />
+				<span lang="ja">他者を政治的・宗教的に扇動するための表現、利用</span>
+				<span lang="en">Use this work in work to incite others with political and/or religious intents</span>
+			</label>	
+		<li>
+			<label>
+				<input type="checkbox" class="term indent-first"/>
+				<span lang="ja">商用利用</span>
+				<span lang="en">User this work in commercial work</span>
+			</label>
+		</li>
+		<li>
+			<label>
+				<input type="checkbox" class="term indent-first"/>
+				<span lang="ja">有償の同人アニメ、同人誌、同人ゲームなどでの利用</span>
+				<span lang="en">Use this work in self-published work(eg. animation, comic, video game) which demand a price</span>
+			</label>
+		</li>
+		<li>
+			<label>
+				<input type="checkbox" class="term indent-first"/>
+				<span lang="ja">ポーズモデル(デッサン人形)としての利用</span>
+				<span lang="en">Use this work as drawing doll</span>
+			</label>
+		</li>
+		<li>
+			<label>
+				<input type="checkbox" class="term indent-first"/>
+				<span lang="ja">閲覧制限のある作品への利用</span>
+				<span lang="en">Use this work in work which set browsing restriction</span>
+			</label>
+		</li>
+		<li>
+			<label>
+				<input type="checkbox" class="term indent-first"/>
+				<span lang="ja">MikuMikuDance以外のソフトウェアでの利用</span>
+				<span lang="en">Use this work in software except MikuMikuDance</span>
+			</label>
+		</li>
+		<li>
+			<label>
+				<input type="checkbox" class="term indent-first"/>
+				<span lang="ja">特定パーツの他モデルへの流用</span>
+				<span lang="en">Reuse parts of this work in another work</span>
+			</label>
+		</li>
+		<li>
+			<label>
+				<input type="checkbox" class="term indent-first"/>
+				<span lang="ja">個人やコミュニティのアイコンとしての利用</span>
+				<span lang="en">Use this work as avatars(user icons) for an individual or a community</span>
+			</label>
+		</li>
 		
 		<h2>表現について</h2>
-		<li class="input-parent"><label><input type="checkbox" class="term-parent indent-first"/>性描写</label>
+		<li class="input-parent">
+			<label>
+				<input type="checkbox" class="term-parent indent-first"/>
+				<span lang="ja">性描写</span>
+				<span lang="en">Use this work to depict sexual content</span>
+			</label>
 			<ul class="input-children">
-				<li><label><input type="checkbox" class="term indent-second"/>成人向け性描写</label></li>
-				<li><label><input type="checkbox" class="term indent-second"/>成人向けではないが過度な性描写</label>
-				<li><label><input type="checkbox" class="term indent-second"/>子供向け(いわゆる少年誌レベルの)性描写</label>
+				<li>
+					<label>
+						<input type="checkbox" class="term indent-second"/>
+						<span lang="ja">成人向け性描写</span>
+						<span lang="en">Use this work to depict sexual content which is X-rated</span>
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="checkbox" class="term indent-second"/>
+						<span lang="ja">成人向けではないが過度な性描写</span>
+						<span lang="en">Use this work to depict sexual content which is not X-rated but excessive sexual</span>
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="checkbox" class="term indent-second"/>
+						<span lang="ja">子供向け(いわゆる少年誌レベルの)性描写</span>
+						<span lang="en">Use this work to depict sexual content which for children(eg. Weekly Shonen Jump)</span>
+					</label>
+				</li>
 			</ul>
 		</li>
-		<li class="input-parent"><label><input type="checkbox" class="term-parent indent-first"/>暴力描写</label>
+		<li class="input-parent">
+			<label>
+				<input type="checkbox" class="term-parent indent-first"/>
+				<span lang="ja">暴力描写</span>
+				<span lang="en">Use this work to depict violent content</span>
+			</label>
 			<ul class="input-children">
-				<li><label><input type="checkbox" class="term indent-second"/>成人向け暴力描写</label></li>
-				<li><label><input type="checkbox" class="term indent-second"/>成人向けではないが過度な暴力描写</label>
-				<li><label><input type="checkbox" class="term indent-second"/>子供向け(いわゆる少年誌レベルの)暴力描写</label>
+				<li>
+					<label>
+						<input type="checkbox" class="term indent-second"/>
+						<span lang="ja">成人向け暴力描写</span>
+						<span lang="en">Use this work to depict violent content which is X-rated</span>
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="checkbox" class="term indent-second"/>
+						<span lang="ja">成人向けではないが過度な暴力描写</span>
+						<span lang="en">Use this work to depict violent content which is not X-rated but excessive violent</span>
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="checkbox" class="term indent-second"/>
+						<span lang="ja">子供向け(いわゆる少年誌レベルの)暴力描写</span>
+						<span lang="en">Use this work to depict violent content which for children(eg. Weekly Shonen Jump)</span>
+					</label>
+				</li>
 			</ul>
 		</li>
-		<li><label><input type="checkbox" class="term indent-first"/>原作の設定を著しく逸脱した表現</label></li>
+		<li>
+			<label>
+				<input type="checkbox" class="term indent-first"/>
+				<span lang="ja">原作の設定を著しく逸脱した表現</span>
+				<span lang="en">Use this work to depict content which to derogate the original work remarkably</span>
+			</label>
+		</li>
 
-		<li class="input-parent"><label><input type="checkbox" class="term-parent indent-first"/>改造・改変</label>
+		<li class="input-parent">
+			<label>
+				<input type="checkbox" class="term-parent indent-first"/>
+				<span lang="ja">改造・改変</span>
+				<span lang="en">Show modified versions of this work</span>
+			</label>
 			<ul class="input-children">
-				<li><label><input type="checkbox" class="term indent-second"/>大きさの変更</label></li>
-				<li><label><input type="checkbox" class="term indent-second"/>特定パーツのサイズ変更</label></li>
-				<li><label><input type="checkbox" class="term indent-second"/>特定パーツの色変更</label></li>
-				<li><label><input type="checkbox" class="term indent-second"/>テクスチャ変更、追加</label>
-				<li><label><input type="checkbox" class="term indent-second"/>ボーン追加</label>
-				<li><label><input type="checkbox" class="term indent-second"/>モーフ追加</label>
-				<li><label><input type="checkbox" class="term indent-second"/>自作パーツの追加、または自作パーツへの変更</label></li>
-				<li><label><input type="checkbox" class="term indent-second"/>配布パーツの追加、または配布パーツへの変更</label></li>
+				<li>
+					<label>
+						<input type="checkbox" class="term indent-second"/>
+						<span lang="ja">大きさの変更</span>
+						<span lang="en">Change the size of this work</span>
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="checkbox" class="term indent-second"/>
+						<span lang="ja">特定パーツのサイズ変更</span>
+						<span lang="en">Change the size of spacific parts of this work</span>
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="checkbox" class="term indent-second"/>
+						<span lang="ja">特定パーツの色変更</span>
+						<span lang="en">Change the color of specific parts of this work</span>
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="checkbox" class="term indent-second"/>
+						<span lang="ja">テクスチャ変更、追加</span>
+						<span lang="en">Change/Add the textures</span>
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="checkbox" class="term indent-second"/>
+						<span lang="ja">ボーン追加、修正</span>
+						<span lang="en">Add/Modify the bones</span>
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="checkbox" class="term indent-second"/>
+						<span lang="ja">モーフ追加、修正</span>
+						<span lang="en">Add/Modify the morphs</span>
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="checkbox" class="term indent-second"/>
+						<span lang="ja">自作パーツの追加、または自作パーツへの変更</span>
+						<span lang="en">Add new parts of your work to this work or Replace new parts of your work for existing parts of this work</span>
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="checkbox" class="term indent-second"/>
+						<span lang="ja">配布パーツの追加、または配布パーツへの変更</span>
+						<span lang="en">Add new parts of publicly-distributed work to this work or Replace new parts of publicly-distributed work for existing parts of this work</span>
+					</label>
+				</li>
 			</ul>
 		</li>
 		
 		<h2>再配布について</h2>
-		<li class="input-parent"><label><input type="checkbox" class="term-parent indent-first"/>再配布</label>
+		<li class="input-parent">
+			<label>
+				<input type="checkbox" class="term-parent indent-first"/>
+				<span lang="ja">再配布</span>
+				<span lang="en">Re-distribute this work</span>
+			</label>
 			<ul class="input-children">
-				<li><label><input type="checkbox" class="term indent-second"/>改変をしない状態での再配布</label></li>
-				<li><label><input type="checkbox" class="term indent-second"/>改変してからの配布</label></li>
-				<li><label><input type="checkbox" class="term indent-second"/>自作配布物と同梱しての再配布</label></li>
+				<li>
+					<label>
+						<input type="checkbox" class="term indent-second"/>
+						<span lang="ja">改変をしない状態での再配布</span>
+						<span lang="en">Re-distribute this work in an unmodified state</span>
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="checkbox" class="term indent-second"/>
+						<span lang="ja">改変した状態での配布</span>
+						<span lang="en">Re-distribute this work with modifications</span>
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="checkbox" class="term indent-second"/>
+						<span lang="ja">自作配布物と同梱しての再配布</span>
+						<span lang="en">Re-distribute this work bundled with your works</span>
+					</label>
+				</li>
 			</ul>
 		</li>
 	</ul>
@@ -87,22 +271,48 @@
 <div class="row">
 <div class="col_12">
 	<ul id="output">
+		<!-- Japanese -->
 		<li class="tab">
-			<a href="#" class="is-active tab-link">Plain Text</a>
+			<a href="#" class="is-active tab-link">Plain Text(日本語)</a>
 			<section>
 				【やってもいいこと】
-				<p id="output-pt-ok"></p>
+				<p id="ja-pt-ok"></p>
 				【やっちゃだめなこと】
-				<p id="output-pt-ng"></p>	
+				<p id="ja-pt-ng"></p>	
 			</section>
 		</li>
 		<li class="tab">
-			<a href="#" class="tab-link">Markdown</a>
+			<a href="#" class="tab-link">Markdown(日本語)</a>
 			<section>
 				#やってもいいこと
-				<p id="output-md-ok"></p><br>
+				<p id="ja-md-ok"></p><br>
 				#やっちゃだめなこと
-				<p id="output-md-ng"></p>
+				<p id="ja-md-ng"></p>
+			</section>
+		</li>
+		<!-- English -->
+		<li class="tab">
+			<a href="#" class="tab-link">Plain Text(English)</a>
+			<section>
+				[!]Notice<br>
+				In the case where the Japanese and English versions contradict each other, the Japanese version (and ultimately, the author's wishes) prevails.<br>
+				<br>
+				You are permitted following deed:
+				<p id="en-pt-ok"></p>
+				You are NOT permitted following deed:
+				<p id="en-pt-ng"></p>	
+			</section>
+		</li>
+		<li class="tab">
+			<a href="#" class="tab-link">Markdown(English)</a>
+			<section>
+				#Notice<br>
+				In the case where the Japanese and English versions contradict each other, the Japanese version (and ultimately, the author's wishes) prevails.<br>
+				<br>
+				#You are permitted following deed
+				<p id="en-md-ok"></p><br>
+				#You are NOT permitted following deed
+				<p id="en-md-ng"></p>
 			</section>
 		</li>
 	</ul>

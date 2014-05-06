@@ -1,37 +1,17 @@
 //ロード時
 $(document).ready(function(){
-	// 保存済み設定を取得して表示
-	// if(localStorage.options){
-	// 	var options = JSON.parse(localStorage.options);
-	// 	showOptions(options);
-	// }
-
-	// タブを表示
-	$('#output').each(function(index) {
-		$(this).children('li').first().children('a').addClass('is-active').next().addClass('is-open').show();
-	});
-	$('#output').on('click', 'li > a', function(event) {
-		if (!$(this).hasClass('is-active')) {
-			event.preventDefault();
-			var accordionTabs = $(this).closest('#output')
-			accordionTabs.find('.is-open').removeClass('is-open').hide();
-			$(this).next().toggleClass('is-open').toggle();
-			accordionTabs.find('.is-active').removeClass('is-active');
-			$(this).addClass('is-active');
-		} else {
-			event.preventDefault();
-		}
-	});
-
 	// チェックを反映
 	$('#save').click(function() {
+		// 取得したテキストを格納する配列を初期化
+		var text = new Array();
 		// アウトプット欄を初期化
 		$('#output').find('p').text('');
 		// チェックボックスを取得してアウトプット
 		var checkboxes = $('#input').find('.indent-first');
 		for(var i=0; i<checkboxes.length; i++) {
 			var check = checkboxes.eq(i);
-			var text = check.parent('label').text();
+			text[0] = check.siblings('span:lang(ja)').text();
+			text[1] = check.siblings('span:lang(en)').text();
 			if(check.is('.term-parent')) {
 				if(check.is(':checked')){
 					listup(true, text);
@@ -47,7 +27,9 @@ $(document).ready(function(){
 						listup(false, text);
 					} else {
 						for(var n=0; n<checkboxes_children.length; n++){
-							listup(checkboxes_children.eq(n).is(':checked'), checkboxes_children.eq(n).parent('label').text());
+							text[0] = checkboxes_children.eq(n).siblings('span:lang(ja)').text();
+							text[1] = checkboxes_children.eq(n).siblings('span:lang(en)').text();
+							listup(checkboxes_children.eq(n).is(':checked'), text);
 						}
 					}
 				}
@@ -58,11 +40,15 @@ $(document).ready(function(){
 	});
 	function listup(c, text){
 		if(c){
-			$('#output-pt-ok').append('・'+text+'<br>');
-			$('#output-md-ok').append('* '+text+'<br>');
+			$('#ja-pt-ok').append('・'+text[0]+'<br>');
+			$('#ja-md-ok').append('* '+text[0]+'<br>');
+			$('#en-pt-ok').append('・'+text[1]+'<br>');
+			$('#en-md-ok').append('* '+text[1]+'<br>');
 		} else {
-			$('#output-pt-ng').append('・'+text+'<br>');
-			$('#output-md-ng').append('* '+text+'<br>');
+			$('#ja-pt-ng').append('・'+text[0]+'<br>');
+			$('#ja-md-ng').append('* '+text[0]+'<br>');
+			$('#en-pt-ng').append('・'+text[1]+'<br>');
+			$('#en-md-ng').append('* '+text[1]+'<br>');
 		}
 	}
 
@@ -85,6 +71,23 @@ $(document).ready(function(){
 	$('#clear').click(function(){
 		$('#input').find('input[type="checkbox"]').prop({'checked': false});
 		$('#output').find('p').text('');
+	});
+
+	// タブを表示
+	$('#output').each(function(index) {
+		$(this).children('li').first().children('a').addClass('is-active').next().addClass('is-open').show();
+	});
+	$('#output').on('click', 'li > a', function(event) {
+		if (!$(this).hasClass('is-active')) {
+			event.preventDefault();
+			var accordionTabs = $(this).closest('#output')
+			accordionTabs.find('.is-open').removeClass('is-open').hide();
+			$(this).next().toggleClass('is-open').toggle();
+			accordionTabs.find('.is-active').removeClass('is-active');
+			$(this).addClass('is-active');
+		} else {
+			event.preventDefault();
+		}
 	});
 
 	//ツイートボタン
